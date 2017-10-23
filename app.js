@@ -36,6 +36,10 @@ function multiply(a,b){ //eslint-disable-line
   var product = a * b;
   var message = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
   return [product, message];
+ }
+
+// TODO: Here is the test for multiply(); uncomment it to run it
+=======
   console.log(message);
   console.log(productDisplay);
 }
@@ -56,18 +60,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
-// TODO: Write your code here
+// DONE: Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
 
-}
+  var sumOfThree = sum(a,(sum(b,c)[0]))[0];
+  var productOfThree = multiply(a,(multiply(b,c)[0]))[0];
+  var messageSum = a + ' and' + b + ' and ' + c + ' sum to' + sumOfThree;
+  var messageProduct = a + ' and' + b + ' and ' + c + ' sum to' + productOfThree;
+  return [sumOfThree, productOfThree, messageSum, messageProduct];
 
-// TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+  // DONE: Here is the test for sumAndMultiply(); uncomment it to run it
+  testSumAndMultiply(4,7,5);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
+  // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
-/////////////////////////////////////
-/* Problem 4
+  /////////////////////////////////////
+  /* Problem 4
 Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
@@ -76,20 +84,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
-// TODO: Write your code here
+  // TODO: Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
 
-}
+  }
 
-// TODO: Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+  // TODO: Here is the test for sumArray(); uncomment it to run it
+  // testSumArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
+  // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
-/////////////////////////////////////
-/* Problem 5
+  /////////////////////////////////////
+  /* Problem 5
 Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
 
 "The numbers 2,3,4 have a product of 24."
@@ -98,10 +106,10 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
-// Write your code here
+  // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
 
-}
+  }}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(2,3,4);
